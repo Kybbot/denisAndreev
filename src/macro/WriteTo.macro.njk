@@ -1,0 +1,30 @@
+{%- macro WriteTo(theme='light') -%}
+<div class="writeTo writeTo--{{ theme }}">
+	<p class="writeTo__text">If you're interested, you can write to</p>
+	<div class="writeTo__line"></div>
+	<div class="writeTo__socials">
+		<a
+			href="https://t.me/andreevDev"
+			target="_blank"
+			rel="noreferrer noopener"
+			class="write__social"
+			aria-label="Telegram"
+		>
+			<svg width="16" height="16" aria-hidden="true" focusable="false">
+				<use href="/icons.svg#telegram" />
+			</svg>
+		</a>
+		<a
+			href="https://api.whatsapp.com/send?phone=380663359915"
+			target="_blank"
+			rel="noreferrer noopener"
+			class="write__social"
+			aria-label="Whatsapp"
+		>
+			<svg width="16" height="16" aria-hidden="true" focusable="false">
+				<use href="/icons.svg#whatsapp" />
+			</svg>
+		</a>
+	</div>
+</div>
+{%- endmacro -%}

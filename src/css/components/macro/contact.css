@@ -1,0 +1,20 @@
+.contact {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+	color: #ffffff;
+	text-decoration: none;
+	margin-bottom: 8px;
+}
+
+.contact--dark {
+	color: #000000;
+}
+
+.contact:last-child {
+	margin-bottom: 0;
+}

@@ -1,0 +1,14 @@
+body {
+	position: relative;
+	min-width: 320px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Manrope", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #000000;
+	background-color: #ffffff;
+	overflow-x: hidden;
+}

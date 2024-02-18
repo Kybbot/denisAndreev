@@ -1,0 +1,83 @@
+<!-- HEADER MODAL -->
+{% include "./MobileMenu.html" %}
+
+<div class="hero">
+	<div class="hero__bg">
+		<div class="hero__bg-1"></div>
+		<div class="hero__bg-2"></div>
+	</div>
+	<!-- HEADER -->
+	{% include "./Header.html" %}
+
+	<!-- HERO CONTENT -->
+	<div class="container">
+		<div class="hero__container">
+			<div class="hero__socials">{{SocialIcons('light')}}</div>
+			<div class="hero__picture">
+				<img
+					class="hero__img"
+					width="460"
+					height="645"
+					src="/imgs/denis.png"
+					srcset="/imgs/denis@2x.png 2x"
+					alt="Denis Andreev"
+				/>
+				<div class="hero__gradient"></div>
+			</div>
+			<div class="hero__wrapper">
+				<div class="hero__info">
+					<h2 class="hero__title">
+						<span class="hero__title--span">D</span><span class="hero__title--span">e</span><span class="hero__title--span">n</span><span class="hero__title--span">i</span><span class="hero__title--span">s</span> <span class="hero__title--span">A</span><span class="hero__title--span">n</span><span class="hero__title--span">d</span><span class="hero__title--span">r</span><span class="hero__title--span">e</span><span class="hero__title--span">e</span><span class="hero__title--span">v</span>
+					<p class="hero__description">
+						Project manager <br />
+						with skills of Analytical and Product skills
+					</p>
+					<div class="hero__line"></div>
+					<div class="hero__icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M13.5894 15L4.98242 6.393L6.39642 4.979L15.0034 13.586L15.0034 6L17.0034 6L17.0034 17L6.00342 17L6.00342 15L13.5884 15L13.5894 15Z"
+								fill="url(#paint0_linear_105_1974)"
+								stroke="black"
+								stroke-width="0.7"
+							/>
+							<defs>
+								<linearGradient
+									id="paint0_linear_105_1974"
+									x1="7.49945"
+									y1="9.49999"
+									x2="17.1607"
+									y2="7.16798"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop stop-color="white" />
+									<stop offset="1" stop-color="#9F9F9F" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+					<p class="hero__about">
+						<span style="display: inline-block; width: 80px; height: 1px"></span>It is a long established fact
+						that a reader will be distracted by the readable content of a page when looking at its layout. The
+						point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+						opposed to using 'Content here
+					</p>
+				</div>
+				<div class="hero__contacts">
+					{{Contacts('light')}}
+					<a
+						href="https://www.linkedin.com/in/denis-andreev-0a9216244/"
+						target="_blank"
+						rel="noreferrer noopener"
+						class="contact hero__contact"
+					>
+						<svg width="16" height="16" aria-hidden="true" focusable="false">
+							<use href="/icons.svg#linkedin" />
+						</svg>
+						denis.andreev
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

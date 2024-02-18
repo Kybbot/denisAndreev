@@ -1,0 +1,40 @@
+<footer class="footer">
+	<div class="container">
+		<div class="footer__container">
+			<div class="footer__wrapper">
+				<div class="footer__one">{{ WriteTo("light") }} {{CvButton("", "light")}}</div>
+				<div class="footer__two">
+					<div class="footer__links">
+						<a href="#experience" class="footer__link">Work Experience</a>
+						<a href="#about" class="footer__link">About me</a>
+						<a href="#education" class="footer__link">Education</a>
+						<a href="#contact" class="footer__link">Contact</a>
+					</div>
+					<div class="footer__languages">
+						<button type="button" data-current="true" class="footer__language">EN</button>
+						<button type="button" class="footer__language">UA</button>
+					</div>
+					<div class="footer__contacts">
+						<p class="footer__titel">Contatcs</p>
+						{{Contacts("light")}}
+					</div>
+				</div>
+			</div>
+			<p class="footer__titel footer__titel--social">Social media</p>
+			<div class="footer__socials footer__socials--min">{{SocialIcons("light")}}</div>
+			<div class="footer__bottom">
+				<p class="footer__coopyright">
+					© Denis Andreev. <br class="footer__br" />
+					All rights reserved
+				</p>
+				<button id="scrollToTop" type="button" class="footer__btn">
+					<svg width="16" height="16" aria-hidden="true" focusable="false">
+						<use href="/icons.svg#arrowTop" />
+					</svg>
+					Back to Top
+				</button>
+				<div class="footer__socials">{{SocialIcons("light")}}</div>
+			</div>
+		</div>
+	</div>
+</footer>

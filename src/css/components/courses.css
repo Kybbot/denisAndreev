@@ -1,0 +1,139 @@
+.courses {
+	padding: 48px 0;
+	background-color: #000000;
+}
+
+.courses__title {
+	font-family: "Montserrat", sans-serif;
+	color: #ffffff;
+	font-size: 44px;
+	font-weight: 800;
+	line-height: 53px;
+	letter-spacing: -0.05em;
+	margin: 0 0 24px 0;
+}
+
+.courses__preview {
+	display: none;
+}
+
+.courses__list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 32px 24px;
+	border-radius: 20px;
+	border: 1px solid #5c5c5c;
+}
+
+.courses__item {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #898590;
+}
+
+.courses__item:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.courses__item:hover > .courses__name {
+	color: #999999;
+}
+
+.courses__name {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 19px;
+	letter-spacing: 0em;
+	margin: 0;
+	transition: color 0.3s ease;
+}
+
+.courses__time {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+	color: #898590;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 19px;
+	letter-spacing: 0em;
+	margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+	.courses__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+	}
+
+	.courses__title {
+		margin: 0;
+	}
+
+	.courses__preview {
+		display: block;
+		width: 100%;
+		position: relative;
+		height: calc(100% - 53px);
+	}
+
+	.courses__img {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		width: 100%;
+		height: auto;
+		display: block;
+		transform: translateY(-50%);
+		transition: opacity 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+	}
+
+	.courses__img.courses__img--active {
+		opacity: 1;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.courses {
+		padding: 76px 0;
+	}
+
+	.courses__container {
+		gap: 80px;
+	}
+
+	.courses__title {
+		font-size: 64px;
+		line-height: 77px;
+	}
+
+	.courses__preview {
+		height: calc(100% - 77px);
+	}
+
+	.courses__list {
+		gap: 24px;
+	}
+
+	.courses__item {
+		padding-bottom: 24px;
+	}
+
+	.courses__name {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}

@@ -1,0 +1,24 @@
+{%- macro Contacts(theme='light') -%}
+<a
+	href="tel:+380 66 335 99 15"
+	target="_blank"
+	rel="noreferrer noopener"
+	class="contact contact--{{ theme }}"
+>
+	<svg width="16" height="16" aria-hidden="true" focusable="false">
+		<use href="/icons.svg#phone" />
+	</svg>
+	+380 66 335 99 15
+</a>
+<a
+	href="mailto:andreev@gmail.com"
+	target="_blank"
+	rel="noreferrer noopener"
+	class="contact contact--{{ theme }}"
+>
+	<svg width="16" height="16" aria-hidden="true" focusable="false">
+		<use href="/icons.svg#email" />
+	</svg>
+	andreev@gmail.com
+</a>
+{%- endmacro -%}

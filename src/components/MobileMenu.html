@@ -1,0 +1,40 @@
+<div id="mobileMenu" class="modal mobileMenu">
+	<div class="modal__content modal__content--top">
+		<div class="mobileMenu__container">
+			<div class="mobileMenu__top">
+				<div class="mobileMenu__wrapper">
+					{{CvButton("", "dark")}}
+					<select name="language" id="language" class="header__select header__select--black">
+						<option value="EN">EN</option>
+						<option value="UA">UA</option>
+					</select>
+				</div>
+				<button id="closeMobileMenu" type="button" class="mobileMenu__close" aria-label="Close modal">
+					<svg width="16" height="16" aria-hidden="true" focusable="false">
+						<use href="/icons.svg#close" />
+					</svg>
+				</button>
+			</div>
+			<nav class="mobileMenu__nav">
+				<ul class="mobileMenu__ul">
+					<li class="mobileMenu__li">
+						<a href="#experience" class="mobileMenu__link">Work Experience</a>
+					</li>
+					<li class="mobileMenu__li">
+						<a href="#about" class="mobileMenu__link">About me</a>
+					</li>
+					<li class="mobileMenu__li">
+						<a href="#education" class="mobileMenu__link">Education</a>
+					</li>
+					<li class="mobileMenu__li">
+						<a href="#contact" class="mobileMenu__link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="mobileMenu__bottom">
+				<div class="mobileMenu__contacts">{{Contacts('dark')}}</div>
+				<div class="mobileMenu__socials">{{SocialIcons('dark')}}</div>
+			</div>
+		</div>
+	</div>
+</div>

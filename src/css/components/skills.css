@@ -1,0 +1,145 @@
+.skills {
+	padding: 48px 0;
+	background-color: #000000;
+}
+
+.skills__top {
+	margin-bottom: 48px;
+}
+
+.skills__picture {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 37px;
+}
+
+.skills__circle {
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+
+.skills__img {
+	position: absolute;
+	top: 0;
+	right: -50%;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+}
+
+.skills__description {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: -0.04em;
+	margin: 0;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: linear-gradient(92.4deg, #ffffff 15.52%, #6d6d6d 85.42%),
+		linear-gradient(0deg, #ffffff, #ffffff);
+}
+
+.skills__description--dec {
+	display: inline-block;
+	width: 80px;
+	height: 1px;
+}
+
+.skills__bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 16px;
+}
+
+.skills__row1,
+.skills__row2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 16px;
+}
+
+.skills__skill {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	gap: 8px;
+
+	width: 163px;
+	height: 163px;
+	padding: 0 10px;
+	border-radius: 50%;
+	border: 1px solid #ffffff30;
+}
+
+.skills__icon {
+	color: #ffffff;
+}
+
+.skills__text {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+	text-align: center;
+	color: #ffffff;
+	margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.skills__top {
+		display: flex;
+		justify-content: space-between;
+		gap: 40px;
+	}
+
+	.skills__bottom {
+		gap: 24px;
+	}
+
+	.skills__picture {
+		margin-bottom: 0;
+	}
+
+	.skills__description {
+		max-width: 513px;
+	}
+
+	.skills__description--dec {
+		width: 100px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.skills {
+		padding: 76px 0;
+	}
+	.skills__top {
+		margin-bottom: 60px;
+	}
+
+	.skills__circle,
+	.skills__img {
+		width: 76px;
+		height: 76px;
+	}
+
+	.skills__description {
+		font-size: 36px;
+		max-width: 913px;
+		line-height: 43px;
+		letter-spacing: -0.04em;
+	}
+
+	.skills__description--dec {
+		width: 180px;
+	}
+
+	.skills__skill {
+		width: 213px;
+		height: 213px;
+	}
+}

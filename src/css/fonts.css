@@ -1,0 +1,26 @@
+/* manrope-500 - latin */
+@font-face {
+	font-family: 'Manrope';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Manrope/manrope-v15-latin-500.woff2') format('woff2');
+}
+
+/* manrope-600 - latin */
+@font-face {
+	font-family: 'Manrope';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Manrope/manrope-v15-latin-600.woff2') format('woff2');
+}
+
+/* montserrat-800 - latin */
+@font-face {
+	font-family: 'Montserrat';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/Montserrat/montserrat-v26-latin-800.woff2') format('woff2');
+}

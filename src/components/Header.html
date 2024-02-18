@@ -1,0 +1,37 @@
+<header class="header">
+	<div class="container">
+		<div class="header__container">
+			<h1 class="header__title">Denis Andreev</h1>
+			<div class="header__wrapper">
+				<nav class="header__nav">
+					<ul class="header__ul">
+						<li class="header__li">
+							<a href="#experience" class="header__link">Work Experience</a>
+						</li>
+						<li class="header__li">
+							<a href="#about" class="header__link">About me</a>
+						</li>
+						<li class="header__li">
+							<a href="#education" class="header__link">Education</a>
+						</li>
+						<li class="header__li">
+							<a href="#contact" class="header__link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__btns">
+					<select name="language" id="language" class="header__select">
+						<option value="EN">EN</option>
+						<option value="UA">UA</option>
+					</select>
+					<button id="headerMenu" type="button" class="header__menu">
+						<svg width="16" height="16" aria-hidden="true" focusable="false">
+							<use href="/icons.svg#menu" />
+						</svg>
+					</button>
+					{{CvButton("header__cv", "light")}}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,22 @@
+.cvButton {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	color: #000000;
+	line-height: 19px;
+
+	width: fit-content;
+	border-style: none;
+	border-radius: 100px;
+	background-color: #ffffff;
+	padding: 10px 16px 11px 16px;
+}
+
+.cvButton--dark {
+	color: #ffffff;
+	background-color: #000000;
+}

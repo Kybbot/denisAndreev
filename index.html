@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/css/index.css" />
+		<title>Vite App</title>
+	</head>
+	<body>
+		{%- from "./src/macro/WriteTo.macro.njk" import WriteTo %} {%- from "./src/macro/CvButton.macro.njk"
+		import CvButton %} {%- from "./src/macro/SocialIcons.macro.njk" import SocialIcons %} {%- from
+		"./src/macro/Contacts.macro.njk" import Contacts %}
+
+		<!-- HERO -->
+		{% include "./src/components/Hero.html" %}
+
+		<main>
+			<!-- PROJECTS -->
+			{% include "./src/components/Projects.html" %}
+
+			<!-- EXPERIENCE -->
+			{% include "./src/components/Experience.html" %}
+
+			<!-- SKILLS -->
+			{% include "./src/components/Skills.html" %}
+
+			<!-- APPS -->
+			{% include "./src/components/Apps.html" %}
+
+			<!-- EDUCATION -->
+			{% include "./src/components/Education.html" %}
+
+			<!-- REVIEWS -->
+			{% include "./src/components/Reviews.html" %}
+
+			<!-- COURSES -->
+			{% include "./src/components/Courses.html" %}
+
+			<!-- LANGUAGES -->
+			{% include "./src/components/Languages.html" %}
+
+			<!-- ADVANTAGES -->
+			{% include "./src/components/Advantages.html" %}
+		</main>
+
+		<!-- FOOTER -->
+		{% include "./src/components/Footer.html" %}
+
+		<script type="module" src="./src/js/index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+{%- macro SocialIcons(theme='light') -%}
+<a
+	href="https://www.instagram.com/andreev.d_/"
+	class="socialIcon socialIcon--{{ theme }}"
+	aria-label="Instagram"
+	target="_blank"
+	rel="noreferrer noopener"
+>
+	<svg width="16" height="16" aria-hidden="true" focusable="false">
+		<use href="/icons.svg#instagram" />
+	</svg>
+</a>
+<a
+	href="https://www.facebook.com/profile.php?id=100017103588367"
+	class="socialIcon socialIcon--{{ theme }}"
+	aria-label="Facebook"
+	target="_blank"
+	rel="noreferrer noopener"
+>
+	<svg width="16" height="16" aria-hidden="true" focusable="false">
+		<use href="/icons.svg#facebook" />
+	</svg>
+</a>
+<a
+	href="https://www.linkedin.com/in/denis-andreev-0a9216244/"
+	class="socialIcon socialIcon--{{ theme }}"
+	aria-label="Linkedin"
+	target="_blank"
+	rel="noreferrer noopener"
+>
+	<svg width="16" height="16" aria-hidden="true" focusable="false">
+		<use href="/icons.svg#linkedin" />
+	</svg>
+</a>
+{%- endmacro -%}
