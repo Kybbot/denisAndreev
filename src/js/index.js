@@ -3,9 +3,11 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 
 document.addEventListener("DOMContentLoaded", () => {
+	// HEADER
 	const header = document.querySelector(".header");
 	header.classList.add("header--active");
 
+	// HERO
 	const heroImg = document.querySelector(".hero__img");
 	heroImg.classList.add("hero__img--active");
 
@@ -38,6 +40,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const heroContacts = document.querySelector(".hero__contacts");
 	heroContacts.classList.add("hero__contacts--active");
+
+	// EXPERIENCE
+	const experienceTitle = document.querySelector(".experience__title");
+	const experienceWriteTo = document.querySelector(".experience__writeTo");
+	const experienceTitleLetters = document.querySelectorAll(".experience__title--span");
+
+	const experienceTitleObserver = new IntersectionObserver((entries) => {
+		if (entries[0].intersectionRatio <= 0) return;
+
+		experienceTitleLetters.forEach((heroTitleLetter, index) => {
+			const i = index + 1;
+			const delay = i < 10 ? `0.${i}s` : `${i.toString().split("").join(".")}s`;
+
+			heroTitleLetter.style.transition = `opacity 0.2s ease-in-out ${delay}`;
+			heroTitleLetter.style.opacity = "1";
+		});
+		experienceTitleObserver.unobserve(entries[0].target);
+	});
+	experienceTitleObserver.observe(experienceTitle);
+
+	const experienceWriteToObserver = new IntersectionObserver((entries) => {
+		if (entries[0].intersectionRatio <= 0) return;
+
+		experienceWriteTo.classList.add("experience__writeTo--active");
+		experienceWriteToObserver.unobserve(entries[0].target);
+	});
+	experienceWriteToObserver.observe(experienceWriteTo);
 });
 
 const swiper = new Swiper(".swiper", {

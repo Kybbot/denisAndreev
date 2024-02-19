@@ -18,6 +18,10 @@
 	margin: 0 0 24px 0;
 }
 
+.experience__title--span {
+	opacity: 0;
+}
+
 .experience__wrapper {
 	margin-bottom: 24px;
 }
@@ -132,6 +136,15 @@
 .experience__img {
 	width: 100%;
 	height: auto;
+}
+
+.experience__writeTo {
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out;
+}
+
+.experience__writeTo--active {
+	opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
