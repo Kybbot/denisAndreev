@@ -9,10 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	const heroImg = document.querySelector(".hero__img");
 	heroImg.classList.add("hero__img--active");
 
-	const heroTitleLetters = document.querySelectorAll(".hero__title--span");
+	const heroSocials = document.querySelectorAll(".hero__socials .socialIcon");
+	heroSocials.forEach((heroSocial, index) => {
+		const i = index + 4;
+		const delay = i < 10 ? `0.${i}s` : `${i.toString().split("").join(".")}s`;
 
+		heroSocial.style.transition = `opacity 0.4s ease-in-out ${delay}`;
+		heroSocial.style.opacity = "1";
+	});
+
+	const heroTitleLetters = document.querySelectorAll(".hero__title--span");
 	heroTitleLetters.forEach((heroTitleLetter, index) => {
-		const i = index + 1;
+		const i = index + 4;
 		const delay = i < 10 ? `0.${i}s` : `${i.toString().split("").join(".")}s`;
 
 		heroTitleLetter.style.transition = `opacity 0.2s ease-in-out ${delay}`;
@@ -22,8 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	const heroDescription = document.querySelector(".hero__description");
 	heroDescription.classList.add("hero__description--active");
 
+	const heroIcon = document.querySelector(".hero__icon");
+	heroIcon.classList.add("hero__icon--active");
+
 	const heroAbout = document.querySelector(".hero__about");
 	heroAbout.classList.add("hero__about--active");
+
+	const heroContacts = document.querySelector(".hero__contacts");
+	heroContacts.classList.add("hero__contacts--active");
 });
 
 const swiper = new Swiper(".swiper", {
