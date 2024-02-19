@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (entry.intersectionRatio <= 0) return;
 
 			target.classList.add("skills__img--active");
-			skillsImg.unobserve(target);
+			skillsImgObserver.unobserve(target);
 		},
 		{ threshold: 0.3 }
 	);
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (entry.intersectionRatio <= 0) return;
 
 			target.classList.add("skills__description--active");
-			skillsImg.unobserve(target);
+			skillsDescriptionObserver.unobserve(target);
 		},
 		{ threshold: 0.3 }
 	);
@@ -145,6 +145,7 @@ const swiper = new Swiper(".swiper", {
 
 const mobileMenu = document.querySelector("#mobileMenu");
 const headerMenuButton = document.querySelector("#headerMenu");
+const mobileMenuLinks = document.querySelectorAll(".mobileMenu__li");
 const closeMobileMenuButton = document.querySelector("#closeMobileMenu");
 
 headerMenuButton.addEventListener("click", () => {
@@ -158,6 +159,13 @@ closeMobileMenuButton.addEventListener("click", () => {
 	document.body.style.overflow = "initial";
 	headerMenuButton.focus();
 });
+
+for (const mobileMenuLink of mobileMenuLinks) {
+	mobileMenuLink.addEventListener("click", () => {
+		mobileMenu.classList.remove("mobileMenu--visible");
+		document.body.style.overflow = "initial";
+	});
+}
 
 let currentProject = null;
 let currentProjectButton = null;
