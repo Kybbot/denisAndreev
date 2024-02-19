@@ -61,6 +61,12 @@
 	height: 1px;
 }
 
+.skills__sub {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
+
 .skills__bottom {
 	display: flex;
 	flex-wrap: wrap;
@@ -151,6 +157,16 @@
 
 	.skills__description--dec {
 		width: 180px;
+	}
+
+	.skills__sub {
+		width: 48px;
+		height: 48px;
+	}
+
+	.skills__sub > svg {
+		width: 48px;
+		height: 48px;
 	}
 
 	.skills__skill {
