@@ -10,12 +10,17 @@
 }
 
 .languages__title {
+	height: fit-content;
 	font-family: "Montserrat", sans-serif;
 	font-size: 44px;
 	font-weight: 800;
 	line-height: 53px;
 	letter-spacing: -0.05em;
 	margin: 0 0 24px 0;
+}
+
+.languages__title--span {
+	opacity: 0;
 }
 
 .languages__blocks {
@@ -33,6 +38,12 @@
 	border-radius: 20px;
 	border: 1px solid #bfbfbf;
 	background-color: #f7f5f7;
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out 0.3s;
+}
+
+.languages__block--active {
+	opacity: 1;
 }
 
 .languages__skill {
@@ -51,6 +62,15 @@
 	letter-spacing: -0.04em;
 	text-align: right;
 	margin: 0;
+}
+
+.languages__writeTo {
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out 0.3s;
+}
+
+.languages__writeTo--active {
+	opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -111,6 +131,7 @@
 		width: 100%;
 		top: 59%;
 		right: 45px;
+		z-index: 2;
 		transform: translateY(-50%);
 	}
 }

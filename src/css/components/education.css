@@ -4,6 +4,7 @@
 }
 
 .education__title {
+	height: fit-content;
 	font-family: "Montserrat", sans-serif;
 	color: #ffffff;
 	font-size: 44px;
@@ -11,6 +12,10 @@
 	line-height: 53px;
 	letter-spacing: -0.05em;
 	margin: 0 0 24px 0;
+}
+
+.education__title--span {
+	opacity: 0;
 }
 
 .education__cards {
@@ -27,6 +32,12 @@
 	padding: 32px 24px 24px 24px;
 	border-radius: 20px;
 	border: 1px solid #5c5c5c;
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out;
+}
+
+.education__card--active {
+	opacity: 1;
 }
 
 .education__row1 {

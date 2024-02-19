@@ -10,6 +10,7 @@
 }
 
 .experience__title {
+	height: fit-content;
 	font-family: "Montserrat", sans-serif;
 	font-size: 44px;
 	font-weight: 800;
