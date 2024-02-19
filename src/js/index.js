@@ -43,9 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// EXPERIENCE
 	const experienceTitle = document.querySelector(".experience__title");
-	const experienceWriteTo = document.querySelector(".experience__writeTo");
 	const experienceTitleLetters = document.querySelectorAll(".experience__title--span");
-
 	const experienceTitleObserver = new IntersectionObserver((entries) => {
 		if (entries[0].intersectionRatio <= 0) return;
 
@@ -60,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 	experienceTitleObserver.observe(experienceTitle);
 
+	const experienceWriteTo = document.querySelector(".experience__writeTo");
 	const experienceWriteToObserver = new IntersectionObserver((entries) => {
 		if (entries[0].intersectionRatio <= 0) return;
 
@@ -67,6 +66,61 @@ document.addEventListener("DOMContentLoaded", () => {
 		experienceWriteToObserver.unobserve(entries[0].target);
 	});
 	experienceWriteToObserver.observe(experienceWriteTo);
+
+	// SKILLS
+	const skillsImg = document.querySelector(".skills__img");
+	const skillsImgObserver = new IntersectionObserver(
+		(entries) => {
+			const entry = entries[0];
+			const target = entry.target;
+
+			if (entry.intersectionRatio <= 0) return;
+
+			target.classList.add("skills__img--active");
+			skillsImg.unobserve(target);
+		},
+		{ threshold: 0.3 }
+	);
+	skillsImgObserver.observe(skillsImg);
+
+	const skillsDescription = document.querySelector(".skills__description");
+	const skillsDescriptionObserver = new IntersectionObserver(
+		(entries) => {
+			const entry = entries[0];
+			const target = entry.target;
+
+			if (entry.intersectionRatio <= 0) return;
+
+			target.classList.add("skills__description--active");
+			skillsImg.unobserve(target);
+		},
+		{ threshold: 0.3 }
+	);
+	skillsDescriptionObserver.observe(skillsDescription);
+
+	const skills = document.querySelectorAll(".skills__skill");
+	const skillsObserver = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry, index) => {
+				if (!entry.isIntersecting) {
+					return;
+				}
+
+				const i = (index + 1) * 2;
+				const delay = i < 10 ? `0.${i}s` : `${i.toString().split("").join(".")}s`;
+
+				entry.target.style.transition = `opacity 0.6s ease-in-out ${delay}`;
+				entry.target.style.opacity = "1";
+				skillsObserver.unobserve(entry.target);
+			});
+			experienceTitleObserver.unobserve(entries[0].target);
+		},
+		{ threshold: 0.3 }
+	);
+
+	for (const skill of skills) {
+		skillsObserver.observe(skill);
+	}
 });
 
 const swiper = new Swiper(".swiper", {
