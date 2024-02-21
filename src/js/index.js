@@ -87,11 +87,6 @@ projectsContainer.addEventListener("mousemove", (event) => {
 	}
 });
 
-const experienceCard = document.querySelector(".experience__card");
-const experienceCards = document.querySelector(".experience__cards");
-const experienceCardHeight = experienceCard.getBoundingClientRect().height;
-experienceCards.style.height = `${experienceCardHeight + 75}px`;
-
 const coursesItems = document.querySelectorAll(".courses__item");
 const coursesImgs = document.querySelectorAll(".courses__img");
 

@@ -33,6 +33,7 @@
 	overflow-x: hidden;
 	overflow-y: scroll;
 	margin-bottom: 24px;
+	height: 615px;
 }
 
 .experience__card {
@@ -54,6 +55,10 @@
 
 .experience__card:nth-child(4) {
 	top: 60px;
+}
+
+.experience__card:nth-child(5) {
+	top: 80px;
 }
 
 .experience__empty {
@@ -198,6 +203,10 @@
 	.experience__title {
 		font-size: 64px;
 		line-height: 77px;
+	}
+
+	.experience__cards {
+		height: 556px;
 	}
 
 	.experience__card {
