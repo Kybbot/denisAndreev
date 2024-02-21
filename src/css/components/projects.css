@@ -40,6 +40,10 @@
 	justify-self: end;
 }
 
+.projects__title--span {
+	opacity: 0;
+}
+
 @media screen and (min-width: 768px) {
 	.projects {
 		padding: 76px 0;

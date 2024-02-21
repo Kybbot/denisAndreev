@@ -39,7 +39,7 @@
 	border: 1px solid #bfbfbf;
 	background-color: #f7f5f7;
 	opacity: 0;
-	transition: opacity 0.6s ease-in-out 0.3s;
+	transition: opacity 0.6s ease-in-out 0.3s, transform 0.3s ease;
 }
 
 .languages__block--active {
@@ -126,6 +126,10 @@
 		max-width: 363px;
 	}
 
+	.languages__block:hover {
+		transform: translateX(15px);
+	}
+
 	.languages__block:nth-child(2) {
 		position: absolute;
 		width: 100%;
@@ -133,5 +137,9 @@
 		right: 45px;
 		z-index: 2;
 		transform: translateY(-50%);
+	}
+
+	.languages__block:nth-child(2):hover {
+		transform: translateY(-50%) translateX(15px);
 	}
 }

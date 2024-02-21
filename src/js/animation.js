@@ -49,7 +49,7 @@ export const animations = () => {
 		const i = index + 4;
 		const delay = i < 10 ? `0.${i}s` : `${i.toString().split("").join(".")}s`;
 
-		heroSocial.style.transition = `opacity 0.4s ease-in-out ${delay}`;
+		heroSocial.style.transition = `opacity 0.4s ease-in-out ${delay}, transform 0.3s ease`;
 		heroSocial.style.opacity = "1";
 	});
 
@@ -77,6 +77,16 @@ export const animations = () => {
 	const heroContacts = document.querySelector(".hero__contacts");
 	heroContacts.classList.add("hero__contacts--active");
 
+	// PROJECTS
+	const projectsTitle = document.querySelector(".projects__title");
+	const projectsTitleLetters = document.querySelectorAll(".projects__title--span");
+	animateTitle(projectsTitle, projectsTitleLetters);
+
+	const projects = document.querySelectorAll(".project");
+	for (const project of projects) {
+		fadeIn(project, "project--active");
+	}
+
 	// EXPERIENCE
 	const experienceTitle = document.querySelector(".experience__title");
 	const experienceTitleLetters = document.querySelectorAll(".experience__title--span");
@@ -103,7 +113,7 @@ export const animations = () => {
 				const i = (index + 1) * 2;
 				const delay = i < 10 ? `0.${i}s` : `${i.toString().split("").join(".")}s`;
 
-				entry.target.style.transition = `opacity 0.6s ease-in-out ${delay}`;
+				entry.target.style.transition = `opacity 0.6s ease-in-out ${delay}, border 0.3s ease`;
 				entry.target.style.opacity = "1";
 				skillsObserver.unobserve(entry.target);
 			});

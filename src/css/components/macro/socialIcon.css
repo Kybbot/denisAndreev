@@ -9,6 +9,11 @@
 	color: #ffffff;
 	border-radius: 50%;
 	border: 1px solid #5c5c5c;
+	transition: transform 0.3s ease;
+}
+
+.socialIcon:hover {
+	transform: scale(1.1);
 }
 
 .socialIcon--dark {
