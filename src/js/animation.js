@@ -135,8 +135,10 @@ export const animations = () => {
 	const reviewsTitleLetters = document.querySelectorAll(".reviews__title--span");
 	animateTitle(reviewsTitle, reviewsTitleLetters);
 
-	const reviewsWriteTo = document.querySelector(".reviews__writeTo");
-	fadeIn(reviewsWriteTo, "reviews__writeTo--active");
+	const reviewsWriteTo = document.querySelectorAll(".reviews__writeTo");
+	for (const reviewWriteTo of reviewsWriteTo) {
+		fadeIn(reviewWriteTo, "reviews__writeTo--active");
+	}
 
 	// COURSES
 	const coursesTitle = document.querySelector(".courses__title");
