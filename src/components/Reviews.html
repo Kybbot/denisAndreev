@@ -2,76 +2,315 @@
 	<div class="container">
 		<div class="reviews__container">
 			<div class="reviews__header">
-				<h2 class="reviews__title">
-					<span class="reviews__title--span">R</span><span class="reviews__title--span">e</span
-					><span class="reviews__title--span">v</span><span class="reviews__title--span">i</span
-					><span class="reviews__title--span">e</span><span class="reviews__title--span">w</span
-					><span class="reviews__title--span">s</span>
-				</h2>
+				<div>
+					<h2 class="reviews__title">
+						<span class="reviews__title--span">R</span><span class="reviews__title--span">e</span
+						><span class="reviews__title--span">v</span><span class="reviews__title--span">i</span
+						><span class="reviews__title--span">e</span><span class="reviews__title--span">w</span
+						><span class="reviews__title--span">s</span>
+					</h2>
+					<p class="reviews__switchText">
+						<span class="reviews__switchText1 reviews__switchText--active">Customers</span>
+						<input type="checkbox" name="slidersCheckbox" id="slidersCheckbox" />
+						<span class="reviews__switchText2">Tema</span>
+					</p>
+				</div>
 				<div class="reviews__writeTo reviews__writeTo--desktop">{{ WriteTo("dark") }}</div>
 			</div>
 			<div class="reviews__sliders">
-				<div class="reviews__slider swiper">
+				<div class="reviews__slider reviews__slider1 swiper">
+					<div class="reviews__data">
+						<p class="reviews__slideNumber">
+							<span class="reviews__slideNumber--current reviews__slideNumber--current1">1</span> |
+							<span class="reviews__slideNumber--all reviews__slideNumber--all1">3</span>
+						</p>
+						<div class="reviews__btns">
+							<div class="reviews__btn swiper-button-prev1">
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M5.21732 7.33349L13.334 7.3335L13.334 8.66683L5.21732 8.66683L8.95065 12.4002L8.00065 13.3335L2.66732 8.00016L8.00065 2.66683L8.95065 3.60016L5.21732 7.33349Z"
+										fill="currentColor"
+									/>
+								</svg>
+							</div>
+							<div class="reviews__btn swiper-button-next1">
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M10.7827 8.6665H2.66602V7.33317H10.7827L7.04935 3.59984L7.99935 2.6665L13.3327 7.99984L7.99935 13.3332L7.04935 12.3998L10.7827 8.6665Z"
+										fill="currentColor"
+									/>
+								</svg>
+							</div>
+						</div>
+					</div>
+
 					<div class="swiper-wrapper">
 						<div class="reviews__slide swiper-slide">
 							<div class="reviews__top">
-								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/1.png" alt="" />
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/1.jpg" alt="" />
 								<div class="reviews__info">
-									<p class="reviews__name">Oleksandr Sarzhan</p>
-									<p class="reviews__position">CEO Domova</p>
+									<p class="reviews__name">David Van</p>
+									<p class="reviews__position">Owner NATIONAL PLUS</p>
 								</div>
 							</div>
 							<p class="reviews__description">
-								It is a long established fact that a reader will be distracted by the readable content of a
-								page when looking at its layout. The point of using. Lorem Ipsum is that it has a more-or-less
-								normal distribution of letters.
+								Denis approached the work process very carefully. From the very beginning, the communication
+								was built in such a way that all the details could not be ignored or taken into account.
+								Project support was carried out very carefully and was monitored at all stages. I really liked
+								the end result not only because of the quality of the work done, but also because of the
+								process of cooperation.
 							</p>
 						</div>
 						<div class="reviews__slide swiper-slide">
 							<div class="reviews__top">
-								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/1.png" alt="" />
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/2.jpg" alt="" />
 								<div class="reviews__info">
-									<p class="reviews__name">Oleksandr Sarzhan</p>
-									<p class="reviews__position">CEO Domova</p>
+									<p class="reviews__name">Stanislav Soloshenko</p>
+									<p class="reviews__position">Product Owner Domova</p>
 								</div>
 							</div>
 							<p class="reviews__description">
-								It is a long established fact that a reader will be distracted by the readable content of a
-								page when looking at its layout. The point of using. Lorem Ipsum is that it has a more-or-less
-								normal distribution of letters.
+								As the PO of the DOMOVA project, I would like to note that Denis approached our collaboration
+								with great creativity and enthusiasm. He demonstrated a deep understanding of user needs and
+								skillfully translated them into specific product requirements. His organizational skills and
+								ability to effectively coordinate the team's work significantly accelerated the implementation
+								of the project. Thanks to clear planning and control, Denis ensured adherence to tight
+								deadlines.
 							</p>
 						</div>
 						<div class="reviews__slide swiper-slide">
 							<div class="reviews__top">
-								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/1.png" alt="" />
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/3.jpg" alt="" />
 								<div class="reviews__info">
-									<p class="reviews__name">Oleksandr Sarzhan</p>
-									<p class="reviews__position">CEO Domova</p>
+									<p class="reviews__name">Liudmila Chudakova</p>
+									<p class="reviews__position">Marketer GARTAL</p>
 								</div>
 							</div>
 							<p class="reviews__description">
-								It is a long established fact that a reader will be distracted by the readable content of a
-								page when looking at its layout. The point of using. Lorem Ipsum is that it has a more-or-less
-								normal distribution of letters.
+								Denis is a very responsible and client-oriented project manager with great insight and a sense
+								of style. He always puts the quality of the project as a priority and brings creative ideas
+								and original solutions. Particularly impressive is his ability to support the team in working
+								on time and with enthusiasm (even in the 9th month of the project!). Thank you and hope to
+								work again soon.
 							</p>
 						</div>
 						<div class="reviews__slide swiper-slide">
 							<div class="reviews__top">
-								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/1.png" alt="" />
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/4.jpg" alt="" />
 								<div class="reviews__info">
-									<p class="reviews__name">Oleksandr Sarzhan</p>
-									<p class="reviews__position">CEO Domova</p>
+									<p class="reviews__name">Anzelika Rakhmanova</p>
+									<p class="reviews__position">Product Owner Sailica</p>
 								</div>
 							</div>
 							<p class="reviews__description">
-								It is a long established fact that a reader will be distracted by the readable content of a
-								page when looking at its layout. The point of using. Lorem Ipsum is that it has a more-or-less
-								normal distribution of letters.
+								Professional and rapidly developing specialist!! I will be glad to work on more projects!
 							</p>
 						</div>
 					</div>
-					<div class="reviews__btn swiper-button-prev">Prev</div>
-					<div class="reviews__btn swiper-button-next">Next</div>
+				</div>
+				<div class="reviews__slider reviews__slider2 swiper">
+					<div class="reviews__data">
+						<p class="reviews__slideNumber">
+							<span class="reviews__slideNumber--current reviews__slideNumber--current2">1</span> |
+							<span class="reviews__slideNumber--all reviews__slideNumber--all2">3</span>
+						</p>
+						<div class="reviews__btns">
+							<div class="reviews__btn swiper-button-prev2">
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M5.21732 7.33349L13.334 7.3335L13.334 8.66683L5.21732 8.66683L8.95065 12.4002L8.00065 13.3335L2.66732 8.00016L8.00065 2.66683L8.95065 3.60016L5.21732 7.33349Z"
+										fill="currentColor"
+									/>
+								</svg>
+							</div>
+							<div class="reviews__btn swiper-button-next2">
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M10.7827 8.6665H2.66602V7.33317H10.7827L7.04935 3.59984L7.99935 2.6665L13.3327 7.99984L7.99935 13.3332L7.04935 12.3998L10.7827 8.6665Z"
+										fill="currentColor"
+									/>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-wrapper">
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/5.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Kate Bykova</p>
+									<p class="reviews__position">UX/UI at Solar Digital</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								Denis is a wonderful and friendly person, a true professional and a pleasure to work with. He
+								is well organized, keeps an eye on every detail of the project scope, built long-term
+								relationships with clients and is always there to lend a hand and make sure everyone is on the
+								same page. We created more than 3 websites together and the whole experience was truly
+								inspiring. I would absolutely love to team up with Denis again in the future, and I highly
+								recommend him to anyone looking for a talented and proactive project manager.
+							</p>
+						</div>
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/6.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Ihnat Makarov</p>
+									<p class="reviews__position">DevOps at Piano</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								Worked with Denis on 1 project as a PM/Business Analyst I would like to say that the project
+								went very smoothly, despite the short deadlines and the “specificity” of the client, thanks to
+								the well-coordinated work and coordination on the part of Denis, the project was completed on
+								time and the client was completely satisfied.
+							</p>
+						</div>
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/7.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Karyna Pashkova</p>
+									<p class="reviews__position">Brand designer</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								Over the past year, I worked on several projects, the manager of which was Denis, and this
+								cooperation was as comfortable and easy as possible for me. In addition to the necessary
+								knowledge and technical skills, Denis uses so-called soft skills, wisdom, and, in general,
+								easy communication with clients and developers, which allows him to solve problematic parts of
+								the project without stress. Skillfully balances between individual projects and the individual
+								growth of specialists and does more for the team than is expected of him .
+							</p>
+						</div>
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/8.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Anastasia Karas</p>
+									<p class="reviews__position">Graphic/Event Designer in SoftServe</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								I'm glad to have experience working with Denis as a project manager. He's proactive, has good
+								communication skills, always keeps close contact with team and clients and prevents concerns
+								that may rise on the project. Denis is involved in day to day progress, reviews ongoing
+								updates and gives good comments on designs. It's pleasant to work with Denis as a project
+								manager and just a colleague, he supports with general questions and is always ready to help.
+							</p>
+						</div>
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/9.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Olga Kuzmenko</p>
+									<p class="reviews__position">QA at Solar Digital</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								Denis is an excellent specialist, the whole team feels very comfortable working with him. All
+								tasks were set clearly and without pressure, everything was clear the first time. When there
+								was a lack of communication in the team, he helped find a common language with the developers.
+								Very polite and patient. In my opinion, it is very important to feel comfortable with a
+								person.
+							</p>
+						</div>
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/10.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Illia Anatskiy</p>
+									<p class="reviews__position">FrontEnd at InCode</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								Denis demonstrated a high level of organization and effective management, which significantly
+								improved the development processes. His regular updates and clear goals made the team more
+								productive. Thanks to Denis's leadership qualities, the project was successfully completed.
+							</p>
+						</div>
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/11.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Marta Fedchuck</p>
+									<p class="reviews__position">BA at Solar</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								Denis and I work in the same position and, despite the fact that we did not overlap together
+								in the same project, I had enough opportunities to observe his work and professional
+								development. Denis takes a responsible approach to his work, constantly improves himself and
+								increases his knowledge and skills. In addition, he has excellent communication and
+								organizational skills, which allows him to successfully manage projects and find common ground
+								with his team and clients. He is always ready to support his colleagues and offer his help in
+								solving problems. In my opinion, Denis will cope with any task and will be a valuable employee
+								in the company.
+							</p>
+						</div>
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/12.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Yuri Istomin</p>
+									<p class="reviews__position">CTO at Solar</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								Working with Denis is a pleasure. He knows how to create a good working atmosphere in a team,
+								is always ready to help, and quickly solves problems that arise. He is attentive to business
+								details, conducts detailed analysis, and his technical specifications are easy and pleasant to
+								work with.
+							</p>
+						</div>
+						<div class="reviews__slide swiper-slide">
+							<div class="reviews__top">
+								<img class="reviews__img" width="52" height="52" src="/imgs/reviews/13.jpg" alt="" />
+								<div class="reviews__info">
+									<p class="reviews__name">Yevdokimova Yelyzaveta</p>
+									<p class="reviews__position">HR</p>
+								</div>
+							</div>
+							<p class="reviews__description">
+								I've been working with Denis in the Solar Digital team for the past two years. He sets a great
+								example as a professional, not only demonstrating high efficiency and professionalism but also
+								the ability to build warm and productive relationships with colleagues. In his role as Project
+								Manager, Denis demonstrates remarkable initiative and responsibility. He is always ready to
+								take on any challenges and tackle them with great energy and understanding. His ability to
+								effectively manage projects and ensure tasks are completed on time with high quality deserves
+								special praise. I particularly want to highlight his exceptional communication skills and
+								openness. Denis is always willing to help and provide constructive feedback. He is a reliable
+								partner for collaboration and a great support for all members of our team. Considering his
+								high level of professionalism and dedication to his work, I look forward to further
+								cooperation on future tasks!
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="reviews__writeTo reviews__writeTo--mobile">{{ WriteTo("dark") }}</div>
