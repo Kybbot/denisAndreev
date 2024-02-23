@@ -7,6 +7,7 @@
 
 .apps__bg {
 	display: none;
+	overflow: hidden;
 }
 
 .apps__title {

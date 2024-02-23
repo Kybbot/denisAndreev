@@ -7,6 +7,7 @@
 
 .languages__bg {
 	display: none;
+	overflow: hidden;
 }
 
 .languages__title {
