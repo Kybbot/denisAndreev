@@ -34,7 +34,7 @@
 	overflow-x: hidden;
 	overflow-y: scroll;
 	margin-bottom: 24px;
-	height: 615px;
+	height: 670px;
 }
 
 .experience__card {
@@ -207,7 +207,7 @@
 	}
 
 	.experience__cards {
-		height: 556px;
+		height: 510px;
 	}
 
 	.experience__card {
