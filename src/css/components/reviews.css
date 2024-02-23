@@ -3,6 +3,10 @@
 	background-color: #f7f5f7;
 }
 
+.reviews__header {
+	margin-bottom: 40px;
+}
+
 .reviews__title {
 	font-family: "Montserrat", sans-serif;
 	font-size: 44px;
@@ -140,6 +144,10 @@
 }
 
 @media screen and (min-width: 768px) {
+	.reviews__header {
+		margin-bottom: 0;
+	}
+
 	.reviews__slider {
 		padding-right: 45px !important;
 	}
