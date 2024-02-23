@@ -1,0 +1,174 @@
+.projectsModal {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+.projectsModal--visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.projectsModal__container {
+	width: 100%;
+	height: 100dvh;
+	overflow-y: auto;
+	border-radius: 20px;
+	background-color: #ffffff;
+}
+
+.projectsModal__firstImage {
+	width: 100%;
+	font-size: 0;
+	line-height: 0;
+	position: relative;
+	aspect-ratio: 16 / 9;
+}
+
+.projectsModal__img {
+	width: 100%;
+	height: 100%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.projectsModal__close {
+	color: #ffffff;
+	position: absolute;
+	top: 22px;
+	right: 22px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 1px solid #ffffff;
+	background-color: transparent;
+}
+
+.projectsModal__data {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 46px;
+	padding: 20px;
+}
+
+.projectsModal__title {
+	font-family: "Montserrat", sans-serif;
+	font-size: 64px;
+	font-weight: 800;
+	line-height: 77px;
+	letter-spacing: -0.05em;
+	margin: 0 0 32px 0;
+}
+
+.projectsModal__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+	color: #ffffff;
+	padding: 10px 16px 11px 16px;
+	border-radius: 100px;
+	text-decoration: none;
+	background-color: #000000;
+}
+
+.projectsModal__info {
+	padding: 24px;
+	max-width: 620px;
+	border-radius: 20px;
+	border: 1px solid #bfbfbf;
+}
+
+.projectsModal__about {
+	margin-bottom: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #bfbfbf;
+}
+
+.projectsModal__about:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.projectsModal__subTitle {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 19px;
+	margin: 0;
+	color: #636263;
+}
+
+.projectsModal__text {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 27px;
+	letter-spacing: -0.04em;
+	margin: 0 0 8px 0;
+}
+
+.projectsModal__text:last-child {
+	margin: 0;
+}
+
+.projectsModal__description {
+	flex: 1;
+	max-width: 881px;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 43px;
+	letter-spacing: -0.04em;
+	margin: 0;
+}
+
+.projectsModal__description--dec {
+	height: 1px;
+	width: 260px;
+	display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+	.projectsModal__about {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.projectsModal__text {
+		text-align: right;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.projectsModal__close {
+		top: 44px;
+		right: 44px;
+	}
+
+	.projectsModal__data {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 76px;
+		padding: 60px 32px 32px 32px;
+	}
+
+	.projectsModal__info {
+		width: 100%;
+		justify-self: end;
+	}
+
+	.projectsModal__footer {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		grid-column: 1 / 3;
+	}
+}

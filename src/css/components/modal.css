@@ -22,3 +22,13 @@
 .modal__content--top {
 	justify-content: flex-start;
 }
+
+.modal__content--full {
+	padding: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+	.modal__content--full {
+		padding: 24px 60px;
+	}
+}
