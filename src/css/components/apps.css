@@ -58,6 +58,8 @@
 }
 
 .apps__item {
+	width: 48px;
+	height: 48px;
 	position: relative;
 	display: inline-flex;
 }
