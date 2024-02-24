@@ -2,7 +2,10 @@
 	<div class="modal__content modal__content--top modal__content--full">
 		<div class="projectsModal__container">
 			<div class="projectsModal__firstImage">
-				<img class="projectsModal__img" src="/imgs/projectsModal/1.jpg" alt="" />
+				<picture>
+					<source srcset="/imgs/projectsModal/1.webp 1x" type="image/webp" />
+					<img class="projectsModal__img" src="/imgs/projectsModal/1.jpg" alt="" />
+				</picture>
 				<button id="closeProjectsModal" type="button" class="projectsModal__close" aria-label="Close modal">
 					<svg width="16" height="16" aria-hidden="true" focusable="false">
 						<use href="/icons.svg#close" />
