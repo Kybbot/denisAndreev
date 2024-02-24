@@ -14,15 +14,17 @@
 		<div class="hero__container">
 			<div class="hero__socials">{{SocialIcons('light')}}</div>
 			<div class="hero__picture">
-				<img
-					class="hero__img"
-					width="465"
-					height="653"
-					src="/imgs/denis.png"
-					srcset="/imgs/denis@2x.png 2x"
-					alt="Denis Andreev"
-					aria-hidden="true"
-				/>
+				<picture aria-hidden="true">
+					<source srcset="/imgs/denis.webp 1x, /imgs/denis@2x.webp 2x" type="image/webp" />
+					<img
+						class="hero__img"
+						width="465"
+						height="653"
+						src="/imgs/denis.png"
+						srcset="/imgs/denis@2x.png 2x"
+						alt="Denis Andreev"
+					/>
+				</picture>
 				<div class="hero__gradient"></div>
 			</div>
 			<div class="hero__wrapper">

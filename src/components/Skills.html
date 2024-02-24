@@ -4,13 +4,18 @@
 			<div class="skills__top">
 				<div class="skills__picture">
 					<div class="skills__circle"></div>
-					<img
-						loading="lazy"
-						src="/imgs/denisMin.png"
-						srcset="/imgs/denisMin@2x.png 2x"
-						alt="Denis Andreev"
-						class="skills__img"
-					/>
+					<picture aria-hidden="true">
+						<source srcset="/imgs/denisMin.webp 1x, /imgs/denisMin@2x.webp 2x" type="image/webp" />
+						<img
+							loading="lazy"
+							src="/imgs/denisMin.png"
+							srcset="/imgs/denisMin@2x.png 2x"
+							alt="Denis Andreev"
+							class="skills__img"
+							width="76"
+							height="76"
+						/>
+					</picture>
 				</div>
 				<p class="skills__description">
 					<span class="skills__description--dec"></span>It is a long
