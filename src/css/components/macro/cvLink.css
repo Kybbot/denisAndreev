@@ -1,4 +1,4 @@
-.cvButton {
+.cvLink {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
@@ -8,6 +8,7 @@
 	font-weight: 500;
 	color: #000000;
 	line-height: 19px;
+	text-decoration: none;
 
 	width: fit-content;
 	border-style: none;
@@ -17,15 +18,15 @@
 	transition: background-color 0.3s ease;
 }
 
-.cvButton:hover {
+.cvLink:hover {
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
-.cvButton--dark {
+.cvLink--dark {
 	color: #ffffff;
 	background-color: #000000;
 }
 
-.cvButton.cvButton--dark:hover {
+.cvLink.cvLink--dark:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 }
