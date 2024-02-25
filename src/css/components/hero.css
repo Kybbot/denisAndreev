@@ -40,6 +40,7 @@
 }
 
 .hero__picture {
+	height: 291px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -171,8 +172,10 @@
 	}
 
 	.hero__picture {
+		height: 392px;
 		flex: 0 1 300px;
 		align-items: flex-end;
+		align-self: flex-end;
 	}
 
 	.hero__img {
@@ -225,6 +228,7 @@
 	}
 
 	.hero__picture {
+		height: 533px;
 		flex: 0 1 380px;
 	}
 
@@ -264,6 +268,7 @@
 	}
 
 	.hero__picture {
+		height: 646px;
 		flex: 0 1 460px;
 	}
 
