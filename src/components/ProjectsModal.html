@@ -3,8 +3,26 @@
 		<div class="projectsModal__container">
 			<div class="projectsModal__firstImage">
 				<picture>
-					<source srcset="/imgs/projectsModal/1.webp 1x" type="image/webp" />
-					<img class="projectsModal__img" src="/imgs/projectsModal/1.jpg" alt="" />
+					<source
+						media="(min-width: 1024px)"
+						srcset="/imgs/projectsModal/domova/1.webp, /imgs/projectsModal/domova/1@2x.webp 2x"
+						type="image/webp"
+					/>
+					<source
+						media="(min-width: 1024px)"
+						srcset="/imgs/projectsModal/domova/1.jpg, /imgs/projectsModal/domova/1@2x.jpg"
+					/>
+					<source
+						srcset="/imgs/projectsModal/domova/1m.webp, /imgs/projectsModal/domova/1m@2x.webp 2x"
+						type="image/webp"
+					/>
+					<img
+						loading="lazy"
+						class="projectsModal__img"
+						src="/imgs/projectsModal/domova/1m.jpg"
+						srcset="/imgs/projectsModal/domova/1m@2x.jpg 2x"
+						alt=""
+					/>
 				</picture>
 				<button id="closeProjectsModal" type="button" class="projectsModal__close" aria-label="Close modal">
 					<svg width="16" height="16" aria-hidden="true" focusable="false">
@@ -14,12 +32,12 @@
 			</div>
 			<div class="projectsModal__data">
 				<div class="projectsModal__header">
-					<h3 class="projectsModal__title">Domova</h3>
+					<h3 id="projectsModalTitle" class="projectsModal__title"></h3>
 					<a
-						href="https://domova.com/en/"
+						href="#"
 						target="_blank"
 						rel="noreferrer noopener"
-						class="projectsModal__link"
+						class="projectsModal__link projectsModal__link--desktop"
 					>
 						Go to Web Site
 						<svg width="16" height="17" aria-hidden="true" focusable="false">
@@ -30,54 +48,128 @@
 				<div class="projectsModal__info">
 					<div class="projectsModal__about">
 						<p class="projectsModal__subTitle">Services provided</p>
-						<div class="projectsModal__list">
-							<p class="projectsModal__text">Brand design</p>
-							<p class="projectsModal__text">UX/UI Design</p>
-							<p class="projectsModal__text">Vue.js</p>
-							<p class="projectsModal__text">Laravel</p>
-							<p class="projectsModal__text">WordPress</p>
-						</div>
+						<div id="projectsModalServices" class="projectsModal__list"></div>
 					</div>
 					<div class="projectsModal__about">
 						<p class="projectsModal__subTitle">Statistic</p>
-						<div class="projectsModal__list">
-							<p class="projectsModal__text">Team of 12 specialists</p>
-							<p class="projectsModal__text">11 months full solution development</p>
-						</div>
+						<div id="projectsModalStatistic" class="projectsModal__list"></div>
 					</div>
 					<div class="projectsModal__about">
 						<p class="projectsModal__subTitle">Year</p>
 						<div class="projectsModal__list">
-							<p class="projectsModal__text">2023</p>
+							<p id="projectsModalYear" class="projectsModal__text"></p>
 						</div>
 					</div>
 					<div class="projectsModal__about">
 						<p class="projectsModal__subTitle">Company</p>
 						<div class="projectsModal__list">
-							<p class="projectsModal__text">Solar Digital</p>
+							<p id="projectsModalCompany" class="projectsModal__text"></p>
 						</div>
 					</div>
 				</div>
+				<a
+					href="#"
+					target="_blank"
+					rel="noreferrer noopener"
+					class="projectsModal__link projectsModal__link--mobile"
+				>
+					Go to Web Site
+					<svg width="16" height="17" aria-hidden="true" focusable="false">
+						<use href="/icons.svg#arrowTopRight" />
+					</svg>
+				</a>
 				<div class="projectsModal__footer">
 					<div class="projectsModal__icon">
-						<svg width="114" height="76" viewBox="0 0 114 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="76" height="76" rx="38" fill="#F18500" />
-							<rect x="38" width="76" height="76" rx="38" fill="#1B5FC4" />
-							<path
-								d="M76.9288 47.8344H63.5411V38.4201H66.4496C66.8203 38.4201 66.9914 37.9916 66.7348 37.7427L61.5451 32.7107C60.932 32.1163 59.934 32.1163 59.3209 32.7107L54.1312 37.7427C53.8746 37.9916 54.0599 38.4201 54.4163 38.4201H57.1965V52.5485C57.1965 53.3503 57.8666 54 58.6936 54H82.4607C82.8314 54 83.0025 53.5715 82.7459 53.3226L77.214 47.9588C77.1427 47.8759 77.0429 47.8344 76.9288 47.8344Z"
-								fill="white"
-							/>
-							<path
-								d="M94.3477 35.9716C94.3477 35.156 94.0198 34.3818 93.421 33.815L77.9944 18.8572C76.7683 17.6684 74.7722 17.6684 73.5318 18.8572L64.2075 27.8983C64.0506 28.0503 64.0506 28.2992 64.2075 28.4651L68.114 32.2529C68.2708 32.405 68.5275 32.405 68.6986 32.2529L75.756 25.3961H75.7703L88.0031 37.2573V47.819V47.8328H85.1944C84.8237 47.8328 84.6526 48.2614 84.9093 48.5102L90.099 53.5422C90.712 54.1367 91.7101 54.1367 92.3231 53.5422L97.5128 48.5102C97.7695 48.2614 97.5841 47.8328 97.2277 47.8328H94.3477V35.9716Z"
-								fill="white"
-							/>
+						<svg width="114" height="76" aria-hidden="true" focusable="false">
+							<use id="projectsModalIconUse" href="/icons.svg#domova" />
 						</svg>
 					</div>
 					<p class="projectsModal__description">
-						<span class="projectsModal__description--dec"></span>Domova is the only platform in the world that
-						brings together owners of apartments and non-residential premises of a dilapidated or emergency
-						building to jointly sell the entire building to investors or construction companies
+						<span class="projectsModal__description--dec"></span>
+						<span id="projectsModalDescriptionText"></span>
 					</p>
+				</div>
+			</div>
+			<div class="projectsModal__pictures">
+				<div class="projectsModal__secondImage">
+					<picture>
+						<source
+							media="(min-width: 768px)"
+							srcset="/imgs/projectsModal/domova/2.webp, /imgs/projectsModal/domova/2@2x.webp 2x"
+							type="image/webp"
+						/>
+						<source
+							media="(min-width: 768px)"
+							srcset="/imgs/projectsModal/domova/2.jpg, /imgs/projectsModal/domova/2@2x.jpg"
+						/>
+						<source
+							srcset="/imgs/projectsModal/domova/2m.webp, /imgs/projectsModal/domova/2m@2x.webp 2x"
+							type="image/webp"
+						/>
+						<img
+							loading="lazy"
+							class="projectsModal__img"
+							src="/imgs/projectsModal/domova/2m.jpg"
+							srcset="/imgs/projectsModal/domova/2m@2x.jpg 2x"
+							alt=""
+						/>
+					</picture>
+				</div>
+				<div class="projectsModal__images">
+					<div class="projectsModal__thirdImage">
+						<picture>
+							<source
+								srcset="/imgs/projectsModal/domova/3.webp, /imgs/projectsModal/domova/3@2x.webp 2x"
+								type="image/webp"
+							/>
+							<img
+								loading="lazy"
+								class="projectsModal__img"
+								src="/imgs/projectsModal/domova/3.jpg"
+								srcset="/imgs/projectsModal/domova/3@2x.jpg 2x"
+								alt=""
+							/>
+						</picture>
+					</div>
+					<div class="projectsModal__fourthImage">
+						<picture>
+							<source
+								srcset="/imgs/projectsModal/domova/4.webp, /imgs/projectsModal/domova/4@2x.webp 2x"
+								type="image/webp"
+							/>
+							<img
+								loading="lazy"
+								class="projectsModal__img"
+								src="/imgs/projectsModal/domova/4.jpg"
+								srcset="/imgs/projectsModal/domova/4@2x.jpg 2x"
+								alt=""
+							/>
+						</picture>
+					</div>
+				</div>
+				<div class="projectsModal__fifthImage">
+					<picture>
+						<source
+							media="(min-width: 768px)"
+							srcset="/imgs/projectsModal/domova/5.webp, /imgs/projectsModal/domova/5@2x.webp 2x"
+							type="image/webp"
+						/>
+						<source
+							media="(min-width: 768px)"
+							srcset="/imgs/projectsModal/domova/5.jpg, /imgs/projectsModal/domova/5@2x.jpg"
+						/>
+						<source
+							srcset="/imgs/projectsModal/domova/5m.webp, /imgs/projectsModal/domova/5m@2x.webp 2x"
+							type="image/webp"
+						/>
+						<img
+							loading="lazy"
+							class="projectsModal__img"
+							src="/imgs/projectsModal/domova/5m.jpg"
+							srcset="/imgs/projectsModal/domova/5m@2x.jpg 2x"
+							alt=""
+						/>
+					</picture>
 				</div>
 			</div>
 		</div>
