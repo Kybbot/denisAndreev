@@ -26,14 +26,21 @@
 	font-size: 0;
 	line-height: 0;
 	position: relative;
+	background-color: #c4c4c4;
 }
 
 .projectsModal__img {
+	opacity: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
+	transition: opacity 0.3s ease;
+}
+
+.projectsModal__img--visible {
+	opacity: 1;
 }
 
 .projectsModal__close {
@@ -172,13 +179,29 @@
 	font-size: 0;
 	line-height: 0;
 	aspect-ratio: 1;
+	border-radius: 20px;
+	background-color: #c4c4c4;
+}
+
+.projectsModal__fifthImage {
+	font-size: 0;
+	line-height: 0;
+	min-height: 228px;
+	border-radius: 20px;
+	background-color: #c4c4c4;
 }
 
 .projectsModal__subImg {
+	opacity: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border-radius: 20px;
+	transition: opacity 0.3s ease;
+}
+
+.projectsModal__subImg--visible {
+	opacity: 1;
 }
 
 .projectsModal__images {
@@ -199,6 +222,10 @@
 
 	.projectsModal__secondImage {
 		aspect-ratio: 16 / 9;
+	}
+
+	.projectsModal__fifthImage {
+		min-height: 500px;
 	}
 
 	.projectsModal__images {

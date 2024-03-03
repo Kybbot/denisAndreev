@@ -1,61 +1,59 @@
+import { projectsData as data } from "./projectsData";
+
 export const initProjects = () => {
-	const data = {
-		Domova: {
-			title: "Domova",
-			link: "https://domova.com/en/",
-			services: ["Brand design", "UX/ UI design", "Vue.js", "Laravel", "WordPress"],
-			statistic: ["Team of 12 specialists", "11 months full solution development"],
-			year: "2023",
-			company: "Solar Digital",
-			icon: "/icons.svg#domova",
-			description:
-				"Domova is the only platform in the world that brings together owners of apartments and non-residential premises of a dilapidated or emergency building to jointly sell the entire building to investors or construction companies.",
-		},
-		Sustayn: {
-			title: "Sustayn",
-			link: "https://sustayn.eu/",
-			services: ["Brand design", "UX/ UI design", "WordPress"],
-			statistic: ["Team of 7 specialists", "4 months full solution development"],
-			year: "2022",
-			company: "Solar Digital",
-			icon: "/icons.svg#sustayn",
-			description:
-				"The client specializes in the agricultural production of ecological products. The results of his work are to combat global warming, improve the quality of the soil he uses, develop the bioeconomy and build sustainable biomass supply chains.",
-		},
-		Derjy: {
-			title: "Держу в курсе",
-			link: "#",
-			services: [],
-			statistic: [],
-			year: "",
-			company: "",
-			icon: "/icons.svg#derjy",
-			description: "",
-		},
-		Kachka: {
-			title: "KACHKA",
-			link: "#",
-			services: [
-				"Brand design",
-				"3D design",
-				"Motion design",
-				"UX/ UI design",
-				"Vue.js  development",
-				"Smart contract development",
-			],
-			statistic: ["Team of 10 specialists", "5 months of full product development"],
-			year: "2022",
-			company: "KachKa",
-			icon: "/icons.svg#kachka",
-			description:
-				"The Kach.NFT team of like-minded people has developed a patriotic collection of 'biological weapons' that protects Ukrainian borders. «Battle ducks» is an irony over Russian propaganda, Ukrainian biological weapons for eliminating the enemies of Ukraine.",
-		},
+	const createPicture = (data, element) => {
+		const arr = [];
+		for (const item of data) {
+			const tag = document.createElement(item.tag);
+			if (item.src) {
+				tag.alt = "";
+				tag.src = item.src;
+			}
+			if (item.type) {
+				tag.type = item.type;
+			}
+			if (item.media) {
+				tag.media = item.media;
+			}
+			if (item.srcset) {
+				tag.srcset = item.srcset;
+			}
+			if (item.class) {
+				tag.classList.add(item.class);
+			}
+			if (item.tag === "img") {
+				tag.onload = function () {
+					console.log(item);
+					tag.classList.add(item.visibleClass);
+				};
+			}
+			arr.push(tag);
+		}
+		element.replaceChildren(...arr);
+	};
+
+	const createText = (data, element) => {
+		const arr = [];
+		for (const item of data) {
+			const p = document.createElement("p");
+			p.classList.add("projectsModal__text");
+			p.textContent = item;
+
+			arr.push(p);
+		}
+		element.replaceChildren(...arr);
 	};
 
 	let currentProjectButton = null;
 	const projectsContainer = document.querySelector(".projects__container");
 	const projectsModal = document.querySelector("#projectsModal");
 	const closeProjectsModal = document.querySelector("#closeProjectsModal");
+
+	const projectsModalFirstImage = document.querySelector("#projectsModalFirstImage");
+	const projectsModalSecondImage = document.querySelector("#projectsModalSecondImage");
+	const projectsModalThirdImage = document.querySelector("#projectsModalThirdImage");
+	const projectsModalFourthImage = document.querySelector("#projectsModalFourthImage");
+	const projectsModalFifthImage = document.querySelector("#projectsModalFifthImage");
 
 	const projectsModalTitle = document.querySelector("#projectsModalTitle");
 	const projectsModalLinks = document.querySelectorAll(".projectsModal__link");
@@ -74,8 +72,20 @@ export const initProjects = () => {
 
 			const projectData = data[projectName];
 
+			const firstImages = data[projectName].firstImages;
+			const secondImages = data[projectName].secondImages;
+			const thirdImages = data[projectName].thirdImages;
+			const fourthImages = data[projectName].fourthImages;
+			const fifthImages = data[projectName].fifthImages;
+
 			const services = data[projectName].services;
 			const statistic = data[projectName].statistic;
+
+			createPicture(firstImages, projectsModalFirstImage);
+			createPicture(secondImages, projectsModalSecondImage);
+			createPicture(thirdImages, projectsModalThirdImage);
+			createPicture(fourthImages, projectsModalFourthImage);
+			createPicture(fifthImages, projectsModalFifthImage);
 
 			projectsModalTitle.textContent = projectData.title;
 
@@ -83,25 +93,8 @@ export const initProjects = () => {
 				projectsModalLink.href = projectData.link;
 			}
 
-			const arrOfServices = [];
-			for (const item of services) {
-				const p = document.createElement("p");
-				p.classList.add("projectsModal__text");
-				p.textContent = item;
-
-				arrOfServices.push(p);
-			}
-			projectsModalServices.replaceChildren(...arrOfServices);
-
-			const arrOfStatistic = [];
-			for (const item of statistic) {
-				const p = document.createElement("p");
-				p.classList.add("projectsModal__text");
-				p.textContent = item;
-
-				arrOfStatistic.push(p);
-			}
-			projectsModalStatistic.replaceChildren(...arrOfStatistic);
+			createText(services, projectsModalServices);
+			createText(statistic, projectsModalStatistic);
 
 			projectsModalYear.textContent = projectData.year;
 			projectsModalCompany.textContent = projectData.company;
