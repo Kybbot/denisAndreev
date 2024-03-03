@@ -1,13 +1,16 @@
 import { projectsData as data } from "./projectsData";
 
 export const initProjects = () => {
-	const createPicture = (data, element) => {
+	const createPicture = (data, element, lazyLoading) => {
 		const arr = [];
 		for (const item of data) {
 			const tag = document.createElement(item.tag);
 			if (item.src) {
 				tag.alt = "";
 				tag.src = item.src;
+				if (lazyLoading) {
+					tag.loading = "lazy";
+				}
 			}
 			if (item.type) {
 				tag.type = item.type;
@@ -82,10 +85,10 @@ export const initProjects = () => {
 			const statistic = data[projectName].statistic;
 
 			createPicture(firstImages, projectsModalFirstImage);
-			createPicture(secondImages, projectsModalSecondImage);
-			createPicture(thirdImages, projectsModalThirdImage);
-			createPicture(fourthImages, projectsModalFourthImage);
-			createPicture(fifthImages, projectsModalFifthImage);
+			createPicture(secondImages, projectsModalSecondImage, true);
+			createPicture(thirdImages, projectsModalThirdImage, true);
+			createPicture(fourthImages, projectsModalFourthImage, true);
+			createPicture(fifthImages, projectsModalFifthImage, true);
 
 			projectsModalTitle.textContent = projectData.title;
 
