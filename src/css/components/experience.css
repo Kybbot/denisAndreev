@@ -32,6 +32,7 @@
 	display: grid;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	overscroll-behavior: auto;
 	margin-bottom: 24px;
 	height: 670px;
 }
