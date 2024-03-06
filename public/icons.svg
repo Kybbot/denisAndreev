@@ -47,6 +47,7 @@
 			fill="white"
 		/>
 	</symbol>
+
 	<!-- Socials -->
 	<symbol
 		id="phone"
@@ -174,6 +175,7 @@
 			</clipPath>
 		</defs>
 	</symbol>
+
 	<!-- SKILS -->
 	<symbol id="rabbit" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<rect x="0.5" y="0.5" width="47" height="47" rx="23.5" fill="black" />
@@ -393,7 +395,45 @@
 			fill="black"
 		/>
 	</symbol>
+
 	<!-- APPS -->
+	<symbol
+		id="appDecMobile"
+		width="177"
+		height="40"
+		viewBox="0 0 177 40"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			d="M75.6014 1.00001L137.082 1.00009C158.576 1.00012 176 18.4241 176 39.9176H0.255859L54.8572 6.79944C61.1116 3.00588 68.2865 1 75.6014 1.00001Z"
+			fill="#F7F5F7"
+		/>
+		<path
+			d="M176 39.5V39.5C176 18.237 158.763 1.00012 137.5 1.00009L75.5349 1.00001C68.2619 1 61.1265 2.98295 54.8963 6.73554L0.5 39.5"
+			stroke="#BFBFBF"
+			stroke-linecap="round"
+		/>
+	</symbol>
+	<symbol
+		id="appDecDesktop"
+		width="272"
+		height="55"
+		viewBox="0 0 272 55"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			d="M88.1027 1H231.5C253.591 1 271.5 18.9086 271.5 41V53.9552H1L64.8886 8.42538C71.6658 3.59566 79.7807 1 88.1027 1Z"
+			fill="#F7F5F7"
+		/>
+		<path
+			fill-rule="evenodd"
+			clip-rule="evenodd"
+			d="M64.597 8.0182C71.4589 3.1281 79.6752 0.5 88.1013 0.5H231.498C253.866 0.5 271.998 18.6325 271.998 41V53.4552C271.998 53.7313 271.775 53.9552 271.498 53.9552C271.222 53.9552 270.998 53.7313 270.998 53.4552V41C270.998 19.1848 253.313 1.5 231.498 1.5H88.1013C79.8833 1.5 71.8698 4.06321 65.1774 8.83257L1.48732 54.0256C1.26243 54.1852 0.950796 54.1326 0.790764 53.908C0.630274 53.6828 0.683074 53.3701 0.908608 53.2101L64.597 8.0182Z"
+			fill="#BFBFBF"
+		/>
+	</symbol>
 	<symbol id="jira" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<rect width="48" height="48" rx="24" fill="black" />
 		<g clip-path="url(#clip0_100_592)">
@@ -882,9 +922,8 @@
 			stroke="#fff"
 		/>
 	</symbol>
-	<!-- PROJECTS -->
 
-	<!-- Domova -->
+	<!-- PROJECTS -->
 	<symbol id="domova" viewBox="0 0 114 76" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<rect width="76" height="76" rx="38" fill="#F18500" />
 		<rect x="38" width="76" height="76" rx="38" fill="#1B5FC4" />

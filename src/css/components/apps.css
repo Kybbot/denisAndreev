@@ -31,6 +31,7 @@
 }
 
 .apps__wrapper {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	row-gap: 48px;
@@ -39,8 +40,20 @@
 	margin: 0 0 0 auto;
 	padding: 36px 24px 50px 24px;
 	border-radius: 20px;
+	border-top-right-radius: 0;
 	border: 1px solid #bfbfbf;
 	background-color: #f7f5f7;
+	z-index: -1;
+}
+
+.apps__decDesktop {
+	display: none;
+}
+
+.apps__decMobile {
+	position: absolute;
+	top: -39.5px;
+	right: -1.5px;
 }
 
 .apps__subtitle {
@@ -121,6 +134,17 @@
 	.apps__wrapper {
 		gap: 64px;
 		padding: 72px;
+	}
+
+	.apps__decMobile {
+		display: none;
+	}
+
+	.apps__decDesktop {
+		position: absolute;
+		display: block;
+		top: -53.5px;
+		right: -1px;
 	}
 }
 
