@@ -63,15 +63,10 @@
 	top: 60px;
 }
 
-.experience__card:nth-child(5) {
-	top: 80px;
-}
-
 .experience__empty {
 	position: sticky;
 	width: 100%;
-	height: 189px;
-	background-color: #f7f5f7;
+	height: 100px;
 }
 
 .experience__top {
@@ -99,7 +94,7 @@
 }
 
 .experience__time {
-	color: #898590;
+	color: #525252;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 19px;
