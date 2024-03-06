@@ -333,12 +333,17 @@ export const projectsData = {
 		],
 		title: "Держу в курсе",
 		link: "#",
-		services: [],
-		statistic: [],
-		year: "",
-		company: "",
+		services: ["UX/UI Design", "WP Development", "Laravel + VueJs development"],
+		statistic: [
+			"Team of 10 specialists",
+			"6 month full solution development",
+			"More than 1000 clients in first day of work",
+		],
+		year: "2021",
+		company: "Держу в курсе",
 		icon: "/icons.svg#derjy",
-		description: "",
+		description:
+			"Держу в курсе - is the modern Web educational platform for preparing and teaching class students for the school exam. The conception of the project is to make cheap group classes which can be more than 1000 people in 1 group. So we had a difficult task, how to combine quality with quantity.",
 	},
 	Kachka: {
 		firstImages: [
