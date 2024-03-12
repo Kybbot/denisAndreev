@@ -168,7 +168,6 @@
 
 	.hero__container {
 		display: flex;
-		gap: 40px;
 	}
 
 	.hero__picture {
@@ -222,11 +221,11 @@
 	}
 
 	.hero__picture {
-		height: 270px;
+		height: 320px;
 	}
 
 	.hero__img {
-		max-height: 270px;
+		max-height: 320px;
 	}
 }
 
@@ -271,17 +270,13 @@
 }
 
 @media screen and (min-width: 1440px) {
-	.hero__container {
-		gap: 64px;
-	}
-
 	.hero__picture {
 		height: 646px;
 		flex: 0 1 460px;
 	}
 
 	.hero__img {
-		max-height: 400px;
+		max-height: 612px;
 	}
 }
 
