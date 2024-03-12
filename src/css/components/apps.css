@@ -11,6 +11,8 @@
 }
 
 .apps__title {
+	position: relative;
+	z-index: 1;
 	font-family: "Montserrat", sans-serif;
 	font-size: 44px;
 	font-weight: 800;
@@ -43,7 +45,6 @@
 	border-top-right-radius: 0;
 	border: 1px solid #bfbfbf;
 	background-color: #f7f5f7;
-	z-index: -1;
 }
 
 .apps__decDesktop {
