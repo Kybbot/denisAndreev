@@ -1,6 +1,7 @@
 .skills {
 	padding: 48px 0;
 	background-color: #000000;
+	position: relative;
 }
 
 .skills__top {

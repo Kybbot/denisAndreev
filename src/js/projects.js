@@ -32,7 +32,12 @@ export const initProjects = () => {
 			}
 			arr.push(tag);
 		}
-		element.replaceChildren(...arr);
+		const picture = document.createElement("picture");
+		picture.setAttribute("aria-hidden", "true");
+
+		picture.replaceChildren(...arr);
+
+		element.replaceChildren(picture);
 	};
 
 	const createText = (data, element) => {
