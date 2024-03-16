@@ -52,6 +52,7 @@
 	border: 1px solid #bfbfbf;
 	background-color: #f7f5f7;
 	scroll-snap-align: start;
+	scroll-snap-stop: always;
 }
 
 .experience__card:last-of-type {
